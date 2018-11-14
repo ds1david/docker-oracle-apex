@@ -8,16 +8,16 @@ This **Dockerfile** is a [trusted build](https://registry.hub.docker.com/u/sath8
 
 ### Installation
 
-    docker pull sath89/apex
+    docker pull ds1david/apex-5.1.4
 
 Run this to upgrade APEX on you Oracle database container:
 
-    docker run -it --rm --volumes-from ${DB_CONTAINER_NAME} --link ${DB_CONTAINER_NAME}:oracle-database sath89/apex install
+    docker run -it --rm --volumes-from ${DB_CONTAINER_NAME} --link ${DB_CONTAINER_NAME}:oracle-database ds1david/apex-5.1.4 install
     #In that case build woud be with default settings and credentials
 
 Run with custom parameters and credentials:
 
-    docker run -it --rm --volumes-from ${DB_CONTAINER_NAME} --link ${DB_CONTAINER_NAME}:oracle-database -e PASS=SomePassWorD sath89/apex install
+    docker run -it --rm --volumes-from ${DB_CONTAINER_NAME} --link ${DB_CONTAINER_NAME}:oracle-database -e PASS=SomePassWorD ds1david/apex-5.1.4 install
 
 The default list of ENV variables is:
 
